@@ -1,0 +1,38 @@
+.border-red {
+    border-color: rgb(187, 54, 54)!important;
+}
+
+.border-green {
+    border-color: rgb(63, 165, 63)!important;
+}
+
+/* MODAL  */
+
+.modal-container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-in-out;
+}
+
+.my-modal {
+    background-color: #FFF;
+    width: 320px;
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.modal-container--visible {
+    opacity: 1;
+    visibility: visible;
+}

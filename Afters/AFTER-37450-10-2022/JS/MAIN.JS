@@ -145,7 +145,7 @@ function renderizarCarrito(){
                     <h5 class="card-title">${producto.nombre}</h5>
                     <p>${producto.precio}€</p>
                     <p>Cantidad: ${producto.cantidad}</p>
-                    <button class="btn btn-danger" onClick="eliminarProductoDelCarrito(${id})">Eliminar</button>
+                    <button class="btn btn-danger" onclick="eliminarProductoDelCarrito(${id})">Eliminar</button>
                 </div>
             </div>
         </div>
