@@ -9,7 +9,10 @@ const precioTotal = document.querySelector('#precioTotal')
 
 const btnVaciar = document.getElementById('vaciarCarrito')
 
-const carrito = []
+let carrito
+const carritoEnLS = JSON.parse( localStorage.getItem('carrito') )
+
+
 
 // generar el DOM de todos los productos
 stockProductos.forEach((producto) => {
@@ -37,6 +40,8 @@ const agregarAlCarrito = (id) => {
     const item = stockProductos.find( (producto) => producto.id === id)
     carrito.push(item)
 
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+
     console.log(carrito)
     renderCarrito()
     renderCantidad()
@@ -48,6 +53,8 @@ const removerDelCarrito = (id) => {
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
 
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+
     renderCarrito()
     renderCantidad()
     renderTotal()
@@ -55,6 +62,8 @@ const removerDelCarrito = (id) => {
 
 const vaciarCarrito = () => {
     carrito.length = 0
+
+    localStorage.setItem('carrito', JSON.stringify(carrito))
 
     renderCarrito()
     renderCantidad()
@@ -91,4 +100,15 @@ const renderTotal = () => {
     })
 
     precioTotal.innerText = total
+}
+
+
+if (carritoEnLS) {
+    carrito = carritoEnLS
+
+    renderCarrito()
+    renderCantidad()
+    renderTotal()
+} else {
+    carrito = []
 }
