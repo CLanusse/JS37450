@@ -30,18 +30,24 @@ const usuario = {
 // console.log(obj1 == obj2) // FALSE!
 
 
-// const usuario2 = {
-//     nombre: "Luis Salinas",
-//     edad: 26,
-//     rol: "Tutor",
-//     curso: "Javascript",
-//     empresa: "Coderhouse"
-// }
+const usuario2 = {
+    nombre: "Luis Salinas",
+    edad: 26,
+    rol: "Tutor",
+    curso: "Javascript",
+    empresa: "Coderhouse"
+}
 
+// const usuario3 = {...usuario2}
+
+// usuario3.nombre = "John Doe"
 // console.log(usuario.nombre)
 
-usuario.nombre = "Luis Salinas"
-usuario.edad += 1
+// usuario.nombre = "Luis Salinas"
+// usuario.edad += 1
+
+console.log(usuario2)
+// console.log(usuario3)
 
 // console.log( usuario["email"] )
 
@@ -133,4 +139,4 @@ class Mascota {
 const mascota1 = new Mascota("Ronnie", 6, "perro")
 
 
-console.log(mascota1)
+// console.log(mascota1)

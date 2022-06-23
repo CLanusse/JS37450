@@ -209,3 +209,12 @@ console.log(mascotas2)
 for (const mascota of mascotas2) {
     mascota.saludar()
 }
+
+
+// matriz
+
+const matriz = [
+    [1, 2, 3], 
+    [4, 5, 6], 
+    [7 ,8, 9]
+]

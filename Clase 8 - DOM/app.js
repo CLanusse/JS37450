@@ -19,7 +19,8 @@ const listItems = document.getElementsByClassName('list-item')
 
 
 
-const titulo = document.getElementById("titulo")
+const titulo = document.querySelector('h2#titulo.titulo')
+// const titulo = document.getElementById("titulo")
 titulo.className = "green font-big"
 
 // console.log(titulo.innerText)
@@ -162,6 +163,7 @@ productos.forEach((producto) => {
 })
 
 
+// const checked = document.querySelectorAll('.radio-button:checked')
 
 
 // const div = document.createElement('div')
