@@ -53,6 +53,8 @@ const agregarAlCarrito = (id) => {
     const item = stockProductos.find( (producto) => producto.id === id)
     carrito.push(item)
 
+    showMensaje(item.nombre)
+
     localStorage.setItem('carrito', JSON.stringify(carrito))
 
     console.log(carrito)
@@ -113,6 +115,18 @@ const renderTotal = () => {
     })
 
     precioTotal.innerText = total
+}
+
+const showMensaje = (producto) => {
+    Toastify({
+        text: `Se agregó ${producto} al carrito!`,
+        duration: 3000,
+        gravity: 'bottom',
+        position: 'left',
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          }
+    }).showToast()
 }
 
 renderCarrito()
