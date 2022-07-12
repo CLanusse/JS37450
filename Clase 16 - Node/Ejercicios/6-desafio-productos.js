@@ -8,6 +8,7 @@
  * E) El producto con mayor precio
  * F) Con los datos de los puntos 1 al 5 crear un objeto y representarlo por consola
  */
+
 let productos = [
     { id: 1, nombre: 'Escuadra', precio: 323.45 },
     { id: 2, nombre: 'Calculadora', precio: 234.56 },
